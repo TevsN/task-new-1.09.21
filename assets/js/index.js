@@ -1,10 +1,12 @@
 "use strict";
 // 1
 function sumTo(n) {
-  if (n == 1) return 1;
-  return n + sumTo(n - 1);
+  if (n === 1) {
+    return 1;
+  } else {
+    return n + sumTo(n - 1);
+  }
 }
-
 console.log(sumTo(4));
 
 /**
@@ -21,16 +23,15 @@ const uneversitet = {
 const student = {
   name: "Alex",
   sourname: " Biba",
-  gender: "man",
+  gender: true,
   contact: {
     number: "0674938645",
     adres: "atolhalfu",
   },
   university: uneversitet,
 };
-
-function getInformation(infoStr) {
-  return student;
+function infoStudent() {
+  console.log(student);
 }
 
 /**
@@ -53,10 +54,10 @@ const books = new Book(
 );
 
 class EBook extends Book {
-  constructor(author, name, publishing, edition, format, electronic_number) {
+  constructor(author, name, publishing, edition, format, electronicNumber) {
     super(author, name, publishing, edition);
     this.format = format;
-    this.electronic_number = electronic_number;
+    this.electronicNumber = electronicNumber;
   }
 }
 const eBooks = new EBook(
@@ -74,7 +75,7 @@ const eBooks = new EBook(
 
 function fizzBuzz(num) {
   for (let i = 1; i <= num; i++) {
-    if (i % 3 === 3 && i % 5 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       console.log(`fizzbuzz`);
     } else if (i % 3 === 0) {
       console.log(`fizz`);
@@ -89,13 +90,10 @@ function fizzBuzz(num) {
 /**
  * ==============================================================
  */
+const arr = [1,2,3,4,5,6,7,8,9,0,1,2,54,732,1,0,2,3,12,412,24,12,412,412,4,1,234]
+// const arr = new Array(25).fill().map((_, i) => Math.random());
 
-const arr = [
-  1, 2, 3, 4, 5, 6, 0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,0, 18, 19, 20, 21,
-  22, 23, 24, 25, 0,
-];
-
-function number() {
+function findElement() {
   arr.forEach(function (item, index) {
     if (index % 2 === 0) {
       console.log(item);
@@ -103,7 +101,15 @@ function number() {
   });
 }
 
-function nummer() {
+function evenInfo() {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      console.log(arr[i]);
+    }
+  }
+}
+
+function findNullindex() {
   arr.forEach(function (item, index) {
     if (item === 0) {
       console.log(index);
@@ -111,10 +117,10 @@ function nummer() {
   });
 }
 
-function sumNull() {
-  arr.forEach(function (item) {
-    if (item === 0) {
-      console.log(item);
+function infoNullElement() {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      console.log(arr[i]);
     }
-  });
+  }
 }
