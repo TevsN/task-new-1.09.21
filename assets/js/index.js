@@ -91,23 +91,30 @@ function fizzBuzz(num) {
  */
 
 const arr = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25,
+  1, 2, 3, 4, 5, 6, 0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,0, 18, 19, 20, 21,
+  22, 23, 24, 25, 0,
 ];
 
-function number () {
-    arr.forEach(function (item, index) {
-        if(index % 2 === 0) {
-            console.log(item)
-        }
-    })
+function number() {
+  arr.forEach(function (item, index) {
+    if (index % 2 === 0) {
+      console.log(item);
+    }
+  });
 }
 
-function nummer () {
-    arr.forEach
-    {
-        if(arr % 2 === 0) {
-           return arr;
-        }
+function nummer() {
+  arr.forEach(function (item, index) {
+    if (item === 0) {
+      console.log(index);
+    }
+  });
 }
+
+function sumNull() {
+  arr.forEach(function (item) {
+    if (item === 0) {
+      console.log(item);
+    }
+  });
 }
